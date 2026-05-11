@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BACK.css">
+    <title>Digital Arnis - Learn the Art of Filipino Martial Arts</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            
+            <ul>
+           <li><a href="FRONT.html">HOME</a></li>
+                <li><a href="STANCE.html">STANCE</a></li>
+                <li><a href="STRIKE.html">STRIKES</a></li>
+                <li><a href="GRIP.html">GRIP</a></li>
+                <li><a href="BLOCK.html">BLOCKS</a></li>
+                <li><a href="#FOOTWORKS">FOOTWORK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+         <section id="footwork">
+            <h2> BASIC FOOTWORK</h2>
+            <div class="content-grid">
+                <div class="technique-card">
+                    
+                    <h3>FORWARD/BACKWARN WITH CHANGED FOOTING</h3>
+                    <p>•Moving forward or backward while switching your lead foot so you can stay balanced and quickly attack or defend.</p>
+                </div>
+                <div class="technique-card">
+                        <img src="C:\Users\marka\Desktop\PATFIT\foot\Screenshot 2026-03-19 011241.png">
+                </div>
+            </div>
+        </section>
+
+         <section id="footwork">
+            <h2> BASIC FOOTWORK</h2>
+            <div class="content-grid">
+                <div class="technique-card">
+                    
+                    <h3>DIAGONAL MOVEMENT</h3>
+                    <p>•Stepping to the side at an angle to avoid getting hit and find a better position to strike.</p>
+                </div>
+                <div class="technique-card">
+                   <img src="C:\Users\marka\Desktop\PATFIT\foot\Screenshot 2026-03-19 012751.png">
+                </div>
+            </div>
+        </section>
+
+         <section id="footwork">
+            <h2> BASIC FOOTWORK</h2>
+            <div class="content-grid">
+                <div class="technique-card">
+                    
+                    <h3>CIRCULAR MOVEMENT CLOCKWISE/ COUNTERCLOCKWISE</h3>
+                    <p>•Moving around your opponent in a circle to stay out of danger and attack from the side.</p>
+                </div>
+                <div class="technique-card">
+                    <img src="C:\Users\marka\Desktop\PATFIT\foot\Screenshot 2026-03-19 011450.png">
+                
+                </div>
+            </div>
+        </section>
+
+      
+        <section id="footwork">
+            <h2> BASIC FOOTWORK</h2>
+            <div class="video-container">
+                    <div class="video card"> 
+                        <video controls>
+                         <source src="ARNIS FOOTWORK- Basic footwork.mp4" type="video/mp4">
+                    </div>
+            </div>
+        </section>
+
+    </main>
+   
+    <footer>
+      <p>MEMBER</p>
+        <p>GAMAS•GAVION•GABANE•ESTADILLO•ESTOPA•GRUTA</p>
+    </footer>
+
+    <script>
+      
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+       
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

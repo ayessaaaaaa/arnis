@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BACK.css">
+    <title>Digital Arnis - Learn the Art of Filipino Martial Arts</title>
+</head>
+<body>
+   
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="STANCE.html">STANCE</a></li>
+                <li><a href="STRIKE.html">STRIKES</a></li>
+                <li><a href="GRIP.html">GRIP</a></li>
+                <li><a href="BLOCK.html">BLOCKS</a></li>
+                <li><a href="FOOTWORK.html">FOOTWORK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>DIGITAL ARNIS</h1>
+            <p>Learn the ancient Filipino martial art of Arnis - Eskrima - Kali</p>
+            <a href="#stance" class="cta-button">Start Learning</a>
+        </div>
+    </section>
+
+    <main>
+        
+        <section id="stance">
+            <h2> ARNIS MARTIAL ARTS</h2>
+                    <h3>INTRODUCTION</h3>
+                     <p>•Arnis is a traditional martial art from the Philippines that teaches people how to defend themselves using sticks, blades, or even just their bare hands. It was created by Filipino warriors long ago to protect themselves and their communities.</p>
+
+                     <p>During the time of the Spanish colonization of the Philippines, Arnis was practiced in secret, often hidden within dances and cultural performances. This helped preserve the art through generations.</p>
+
+                     <p>Arnis does not have a single “founder” because it developed naturally among different Filipino tribes over many centuries. However, one important figure often called the “Father of Modern Arnis” is Remy Presas. In the 20th century, he helped organize and promote Arnis as a sport and teaching system, </p>especially in schools.
+
+                     <p>Arnis has existed even before the 1500s, but it became officially recognized as the national martial art and sport of the Philippines in 2009 through Republic Act No. 9850.</p>
+
+                     <p>Today, Arnis is more than just a fighting styleit is part of Filipino identity and culture. It helps improve coordination, discipline, and confidence while teaching practical self-defense skills.</p>
+
+        </section>
+    </main>
+  
+    <footer>
+       
+        <p>BSIT-2C/GROUP 4</p>
+
+    </footer>
+
+    <script>
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+       
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
